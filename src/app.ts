@@ -10,7 +10,8 @@ const app: Application = express();
 //parser
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors({ credentials: true, origin: '*' }));
+// app.use(cors({ credentials: true, origin: '*' }));
+app.use(cors({ credentials: true, origin: ['https://bike-management-dash.web.app'] }))
 app.get('/', (req: Request, res: Response) => {
   res.send('hello world');
 });
